@@ -59,6 +59,6 @@ console.log(transmogrifier(2,2,3));
 
 // your code here
 var wordReverse = function(inputString) {
-  return inputString.split("").reverse().join("")
+    return inputString.split(" ").reverse().join(" ");
 }
-console.log(wordReverse("apple"));
+console.log(wordReverse("apple pen"));

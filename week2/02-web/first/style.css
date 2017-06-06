@@ -1,0 +1,18 @@
+
+#main-heading {
+  color: tomato;
+}
+
+.desire {
+  font-size: 20px;
+}
+
+/*all children and their children*/
+article span {
+  color: lime;
+}
+
+/*only direct child*/
+article > span {
+  color: blue;
+}
