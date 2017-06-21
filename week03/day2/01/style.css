@@ -1,0 +1,12 @@
+div {
+  /* display: inline-block; */
+  background-color: yellow;
+  border: 1px solid black;
+  height: 100px;
+  width: 100px;
+  float: left;
+
+}
+.parent {
+  height: 200px;
+}

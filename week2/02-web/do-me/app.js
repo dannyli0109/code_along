@@ -1,7 +1,7 @@
 var input = document.querySelector(".input")
 var add = document.querySelector(".add")
 var list = document.querySelector("ul")
-
+var enterKey = 13
 
 
 var cross = function(event) {
@@ -16,8 +16,6 @@ var addItem = function() {
     list.appendChild(newListItem)
     input.value = ""
   }
-
-
 }
 
 
@@ -27,8 +25,8 @@ list.addEventListener("click", function(event) {
   }
 })
 add.addEventListener("click", addItem)
-document.addEventListener('keypress', function(e) {
-  if (e.keyCode === 13) {
+input.addEventListener('keypress', function(e) {
+  if (e.keyCode === enterKey) {
     addItem()
   }
 });
