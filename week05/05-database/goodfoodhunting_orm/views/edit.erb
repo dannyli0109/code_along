@@ -1,0 +1,24 @@
+<h2>edit dish</h2>
+
+<form action="/dishes/<%=@dish["id"]%>" method="post">
+
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="">name</label>
+  <input type="text" name="name" value = "<%=@dish["name"]%>">
+
+  <label for="">image_url</label>
+  <input type="text" name="image_url" value = "<%=@dish["image_url"]%>">
+
+  <select name="dish_type_id">
+    <option disabled selected value> -- select an option -- </option>
+    <% @dish_types.each do |dish_type| %>
+      <% if dish_type.id == @dish.dish_type_id %>
+        <option selected value="<%= dish_type.id%>"><%= dish_type.name %></option>
+      <%else%>
+        <option value="<%= dish_type.id%>"><%= dish_type.name %></option>
+      <%end%>
+    <% end %>
+  </select>
+  <button>update</button>
+</form>

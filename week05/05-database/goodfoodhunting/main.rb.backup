@@ -1,0 +1,30 @@
+
+require 'sinatra'
+require "sinatra/reloader"
+require "pry"
+
+get '/dish_list' do
+  lines = File.readlines("dishes.csv")
+
+  @dishes = get_dishes
+
+  erb :index
+end
+
+
+get "/dish_details/:dish_name" do
+  erb :dish_details
+end
+
+
+def get_dishes
+  lines = File.readlines("dishes.csv")
+  dishes = lines.map do |line|
+    hash = {}
+    name, image_url = line.split(",")
+    hash[:name] = name
+    hash[:image_url] = image_url
+    hash
+  end
+  return dishes
+end

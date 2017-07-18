@@ -1,0 +1,11 @@
+<ul>
+<% @languages.each do |lang| %>
+<li><%= lang %></li>
+<% end %>
+</ul>
+
+
+<form action="/result">
+  <input name="stock", placeholder="stock name">
+  <button>check</button>
+</form>

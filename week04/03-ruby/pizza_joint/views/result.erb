@@ -1,0 +1,11 @@
+
+
+<% if @result["error"] != nil %>
+<h1>"No result found"</h1>
+<% else %>
+<ul>
+<% @result["rates"].each do |key,value| %>
+  <li><%= "#{key}: #{value}" %></li>
+<% end %>
+</ul>
+<% end %>
